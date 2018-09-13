@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="splash">
+ <h1 class="title">MeMory GaMe</h1>
+	<button class="start">Start Game</button>
+</div>
+
+
+    <div class="container">
+        <header>
+            <h1>Matching Game</h1>
+        </header>
+
+        <section class="score-panel">
+            <span class="timer">00 : 00</span>
+
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">3</span> Moves
+
+            <div class="restart">
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+        <ul class="deck">
+
+        </ul>
+    </div>
+
+    <div id="popupWinner" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <img class="congrats" src="img/congrats.gif">
+            </div>
+            <div class="modal-body">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <ul class="stars">
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Moves:</td>
+                        <td class="moves">8</td>
+                    </tr>
+                    <tr>
+                        <td>Your Time:</td>
+                        <td class="timer">00:45</td>
+                    </tr>
+                    <tr>
+                        <td>Best Time:</td>
+                        <td class="best-time">00:30</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button>Play Again</button>
+            </div>
+        </div>
+
+    </div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    
+    <script>
+		$(".start").on("click",function(){
+			$(".container").css("display","flex");
+			$(".splash").css("display","none");
+		});
+	</script>
+</body>
+</html>
